@@ -1,1 +1,23 @@
 //#7BA9D4 투명도 70%
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.container01 {
+  background-color: red;
+}
+.container02 {
+  background-color: blue;
+}
+.container03 {
+  background-color: green;
+}
+.container04 {
+  background-color: yellow;
+}
