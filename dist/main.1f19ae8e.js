@@ -118,24 +118,45 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-window.addEventListener("load", function () {
-  // 초기 섹션을 활성화합니다. 보통 첫 번째 섹션을 활성화합니다.
-  var initialSection = document.querySelector(".section");
-  initialSection.classList.add("active");
+$(document).ready(function () {
+  $("#fullpage").fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true,
+    scrolling: true,
+    css3: true,
+    navigation: true,
+    slidesNavigation: true,
+    keyboardScrolling: false
+  });
+
+  //methods
+  $.fn.fullpage.setAllowScrolling(true);
 });
-var currentSectionIndex = 0;
-function handleScroll() {
-  var scrollTop = window.scrollY || document.documentElement.scrollTop;
-  var newSectionIndex = Math.floor(scrollTop / window.innerHeight);
-  if (newSectionIndex !== currentSectionIndex) {
-    var prevSection = document.querySelector(".section.active");
-    var newSection = document.querySelectorAll(".section")[newSectionIndex];
-    prevSection.classList.remove("active");
-    newSection.classList.add("active");
-    currentSectionIndex = newSectionIndex;
+var swiper = new Swiper(".swiper", {
+  // Optional parameters
+  freeMode: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination"
   }
-}
-window.addEventListener("scroll", handleScroll);
+
+  // Navigation arrows
+  /* navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }, */
+
+  // And if we need scrollbar
+  /* scrollbar: {
+    el: ".swiper-scrollbar",
+  }, */
+});
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -161,7 +182,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57467" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60438" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

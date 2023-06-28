@@ -1,24 +1,44 @@
-window.addEventListener("load", () => {
-  // 초기 섹션을 활성화합니다. 보통 첫 번째 섹션을 활성화합니다.
-  const initialSection = document.querySelector(".section");
-  initialSection.classList.add("active");
+$(document).ready(function () {
+  $("#fullpage").fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true,
+    scrolling: true,
+
+    css3: true,
+
+    navigation: true,
+    slidesNavigation: true,
+    keyboardScrolling: false,
+  });
+
+  //methods
+  $.fn.fullpage.setAllowScrolling(true);
 });
-let currentSectionIndex = 0;
 
-function handleScroll() {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  freeMode: true,
+  watchSlidesProgress: true,
 
-  const newSectionIndex = Math.floor(scrollTop / window.innerHeight);
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-  if (newSectionIndex !== currentSectionIndex) {
-    const prevSection = document.querySelector(".section.active");
-    const newSection = document.querySelectorAll(".section")[newSectionIndex];
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-    prevSection.classList.remove("active");
-    newSection.classList.add("active");
+  // Navigation arrows
+  /* navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }, */
 
-    currentSectionIndex = newSectionIndex;
-  }
-}
-
-window.addEventListener("scroll", handleScroll);
+  // And if we need scrollbar
+  /* scrollbar: {
+    el: ".swiper-scrollbar",
+  }, */
+});

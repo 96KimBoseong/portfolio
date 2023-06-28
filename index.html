@@ -4,13 +4,151 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kim-Bo-Seong</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="main.scss" />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <section class="container01 section"></section>
-    <section class="container02 section"></section>
-    <section class="container03 section"></section>
-    <section class="container04 section"></section>
-    <script src="main.js" defer></script>
+    <div id="fullpage">
+      <div class="container01 section">
+        <h1>Front-End-Developer</h1>
+        <h2>Kim-Bo-Seong</h2>
+      </div>
+      <div class="container02 section">
+        <div class="profile_outer">
+          <h1>Profile</h1>
+          <div class="profile_box">
+            <div class="img_box">
+              <img src="./images/profile.jpg" alt="Profile" />
+            </div>
+            <div class="text_box">
+              <p>이름 : 김보성</p>
+              <p>생년월일 : 1996.10.23</p>
+              <p>주소: 부산광역시 남구 대연동</p>
+              <p>Tel: 010-3849-8934</p>
+              <p>e-mail: rlaqhtjddl8934@gmail.com</p>
+              <p>github : <a href="https://github.com/96kimboseong">https://github.com/96kimboseong</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container03 section">
+        <h1>My skill</h1>
+        <div class="skill_box_outer">
+          <div class="skill_box">
+            <div class="skills skills01">
+              <div class="skill_img">
+                <img src="./images/skill/html5.png" alt="html5" />
+              </div>
+              <div class="skill_info">웹표준성과 접근성에 맞게 시멘틱태그를 마크업 할수있습니다.</div>
+            </div>
+            <div class="skills skills02">
+              <div class="skill_img">
+                <img src="./images/skill/css3.png" alt="css3" />
+              </div>
+              <div class="skill_info">스타일시트로 그리드 레이아웃을 구성할수 있고 애니메이션 /반응형웹에 대응 가능합니다.</div>
+            </div>
+            <div class="skills skills03">
+              <div class="skill_img">
+                <img src="./images/skill/js.png" alt="js" />
+              </div>
+              <div class="skill_info">es6에 기반하여 DOM구조에 접근하여 웹에 동적인 이벤트를 생성하고 라이브러리/플러그인을 활용가능합니다.</div>
+            </div>
+            <div class="skills skills04">
+              <div class="skill_img">
+                <img src="./images/skill/react.png" alt="react" />
+              </div>
+              <div class="skill_info">스타일 컴포넌트와 훅 라우터 리덕스를 사용하여 spa를 구현 가능합니다.</div>
+            </div>
+            <div class="skills skills05">
+              <div class="skill_img">
+                <img src="./images/skill/jquery.png" alt="jquery" />
+              </div>
+              <div class="skill_info">라이브러리를 활용하여 동적이벤트를 생성가능하고 플러그인을 활용가능합니다.</div>
+            </div>
+            <div class="skills skills06">
+              <div class="skill_img">
+                <img src="./images/skill/sass.png" alt="sass" />
+              </div>
+              <div class="skill_info">scss문법을 활용하여 스타일시트를 적용가능합니다.</div>
+            </div>
+            <div class="skills skills07">
+              <div class="skill_img">
+                <img src="./images/skill/node.js.png" alt="node.js" />
+              </div>
+              <div class="skill_info">npm패키지매니저로 패키지를 관리할수있습니다.</div>
+            </div>
+            <div class="skills skills08">
+              <div class="skill_img">
+                <img src="./images/skill/parcel.png" alt="parcel" />
+              </div>
+              <div class="skill_info">번들러를 활용하여 모듈화 작업이 가능하고 내장서버 실행하여 개발/빌드가능합니다.</div>
+            </div>
+            <div class="skills skills09">
+              <div class="skill_img">
+                <img src="./images/skill/git.png" alt="git" />
+              </div>
+              <div class="skill_info">git으로 형상버전관리가 가능하면 github과 연동하여 레포지토리로 접근할수 있습니다.</div>
+            </div>
+            <div class="skills skills10">
+              <div class="skill_img">
+                <img src="./images/skill/graphql.png" alt="graphql" />
+              </div>
+              <div class="skill_info">데이터베이스를 구축하고 추출하여 활용할수있습니다.</div>
+            </div>
+            <div class="skills skills11">
+              <div class="skill_img">
+                <img src="./images/skill/bootstrap.png" alt="bootstrap" />
+              </div>
+              <div class="skill_info">부트스트랩으로 레이아웃구조를 구현할수있습니다.</div>
+            </div>
+            <div class="skills skills12">
+              <div class="skill_img">
+                <img src="./images/skill/json.png" alt="json" />
+              </div>
+              <div class="skill_info">json데이터를 활용하여 객체로 변환하여 활용할수있습니다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container04 section">
+        <h1>Project</h1>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="img_box">
+                <img src="" alt="" />
+              </div>
+              <div class="info_box"></div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>
